@@ -1,0 +1,19 @@
+class Celular:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+        self.bateria = 100
+
+    def fazer_chamada(self, duracao):
+        try:
+            gasto = int(duracao) * 2
+            if self.bateria >= gasto:
+                self.bateria -= gasto
+                print(f"chamada de {duracao} min feita! bateria: {self.bateria}%")
+            else:
+                print("bateria insuficiente")
+        except ValueError:
+            print("erro: A duração deve ser um numero inteiro.")
+            
+ meu Celular = Celular("Iphone", "12 pro")            # type: ignore
+                  

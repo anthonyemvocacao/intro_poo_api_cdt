@@ -1,0 +1,26 @@
+class Celular:
+    def __init__(self, marca, modelo):
+        self.marca = marca
+        self.modelo = modelo
+
+    def verificar_status(self):
+        try: 
+        entrada = input(f"Bateria do {self.modelo}:")
+        nivel = float(entrada)
+
+        if nivel < 0 or nivel > 100:
+            print("valor invalido! digite de 0 a 100.")
+
+         elif nivel < 15:
+            print(f"⚠ bateria em {nivel}%!. carregue já.")
+
+         elif nivel < 85:
+            print(f"✔ Bateria em {nivel}%. carga ecxelente!")
+
+            print(f"📱 Bateria em {nivel}%. Status normal.")
+            except ValueError:
+             print("Erro: digite apenas numeros!")
+
+             cel = Celular("Iphone", "12 pro")
+                cel.verificar_status()
+                
